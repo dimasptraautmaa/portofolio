@@ -7,945 +7,270 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://stresslo.com/">
   <meta name="title" content="stresslo - Dimas's Portfolio">
-  <meta name="description" content="Turn Your Vision into Reality: Inspiring Web and Design Solutions."/>
+  <meta name="description" content="Turn Your Vision into Reality: Inspiring Web and Design Solutions.">
   <meta name="keywords" content="Web template, Vector template, 3D template, Motion template, UI/UX Design">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <meta property="og:site_name" content="stresslo">
   <meta property="og:title" content="stresslo - Dimas's Portfolio">
   <meta property="og:description" content="Turn Your Vision into Reality: Inspiring Web and Design Solutions.">
-  <meta property="og:keywords" content="Web template, Vector template, 3D template, Motion template, UI/UX Design">
   <title>Dimas's Portofolio</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="icon" href="./assets/images/logo.ico">
   <link rel="apple-touch-icon" href="./assets/images/logo.ico" sizes="180x180">
-  <link rel="apple-touch-icon-precomposed" href="./assets/images/logo.ico" sizes="180x180">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-  <!--
-    - google font link
-  -->
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- Icon sprite (no external icon library needed) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+  </svg>
+
+  <!-- NAVBAR -->
+  <nav class="nav" aria-label="Main">
+    <a href="#about"><span class="short">About</span><span class="long">About</span></a>
+    <a href="#certificate"><span class="short">Cert</span><span class="long">Certificate</span></a>
+    <a href="#projects"><span class="short">Work</span><span class="long">Projects</span></a>
+    <a href="#services"><span class="short">Plans</span><span class="long">Services</span></a>
+    <a href="#contact"><span class="short">Contact</span><span class="long">Contact</span></a>
+  </nav>
 
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <!-- HERO -->
+    <header class="wrap hero">
+      <div>
+        <p class="hero-loc rise" style="--d:.1s"><svg class="ic"><use href="#i-pin"/></svg> West Java, Indonesia</p>
+        <h1 class="display t-hero rise" style="--d:.25s">Hi, I'm Dimas. I build things for the web.</h1>
+        <p class="lead rise" style="--d:.45s">
+          I'm a Frontend Web Developer and a Software Engineering student who loves building web apps.
+          I really enjoy programming and sleeping, of course. Let's make a project together.
+        </p>
+        <div class="hero-actions rise" style="--d:.6s">
+          <a href="#projects" class="btn btn-primary">See my work <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a href="#contact" class="btn btn-outline">Say hello</a>
+        </div>
+      </div>
 
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Dimas Putra Utama" width="80">
+      <div class="hero-art">
+        <figure class="avatar">
+          <span class="display" aria-hidden="true">DP</span>
+          <img src="./assets/images/my-avatar.png" alt="Dimas Putra Utama" onerror="this.remove()">
         </figure>
+        <span class="chip" style="--r:-8deg;--d:.9s;left:2%;top:6%;background:#FFE9A8">React JS</span>
+        <span class="chip" style="--r:6deg;--d:1.05s;left:66%;top:2%;background:#BDEBD9">Express</span>
+        <span class="chip" style="--r:5deg;--d:1.2s;left:0;top:68%;background:#FFD3C2">MySQL</span>
+        <span class="chip" style="--r:-6deg;--d:1.35s;left:66%;top:86%;background:#fff">Python</span>
+      </div>
+    </header>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Dimas Putra</h1>
+    <!-- ABOUT -->
+    <section id="about" class="wrap block">
+      <div class="section-head">
+        <h2 class="display t-title">A little about me</h2>
+        <p class="lead">What I do, what I use, and how comfortable I am with each.</p>
+      </div>
 
-          <p class="title">Web Developer</p>
+      <div class="bento">
+        <article class="do do-1 lift">
+          <svg class="ic ic-lg"><use href="#i-moon"/></svg>
+          <h3 class="display">Sleeping</h3>
+          <p>I usually sleep three times a day, hehe. 😆</p>
+        </article>
+        <article class="do do-2 lift">
+          <svg class="ic ic-lg"><use href="#i-code"/></svg>
+          <h3 class="display">Web development</h3>
+          <p>High-quality development of sites at the intermediate level.</p>
+        </article>
+        <article class="do do-3 lift">
+          <svg class="ic ic-lg"><use href="#i-db"/></svg>
+          <h3 class="display">Data modeling</h3>
+          <p>I design clean, efficient data structures and relationships.</p>
+        </article>
+        <article class="do do-4 lift">
+          <svg class="ic ic-lg"><use href="#i-pen"/></svg>
+          <h3 class="display">UI/UX design</h3>
+          <p>Professional design of applications for iOS and Android.</p>
+        </article>
+
+        <article class="skills" id="skills">
+          <h3 class="display">Skills</h3>
+          <ul class="rings">
+            <li style="--v:80"><svg class="ring-svg" viewBox="0 0 100 100" role="img" aria-label="Frontend 80%"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fg" cx="50" cy="50" r="42"/></svg><p class="display pct">80%</p><p class="muted small">Frontend</p></li>
+            <li style="--v:70"><svg class="ring-svg" viewBox="0 0 100 100" role="img" aria-label="Backend 70%"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fg" cx="50" cy="50" r="42"/></svg><p class="display pct">70%</p><p class="muted small">Backend</p></li>
+            <li style="--v:50"><svg class="ring-svg" viewBox="0 0 100 100" role="img" aria-label="Web design 50%"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fg" cx="50" cy="50" r="42"/></svg><p class="display pct">50%</p><p class="muted small">Web design</p></li>
+            <li style="--v:50"><svg class="ring-svg" viewBox="0 0 100 100" role="img" aria-label="Graphic design 50%"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fg" cx="50" cy="50" r="42"/></svg><p class="display pct">50%</p><p class="muted small">Graphic design</p></li>
+          </ul>
+          <ul class="stack">
+            <li title="A JavaScript library for building user interfaces from reusable components.">React JS</li>
+            <li title="A fast, minimal web framework for Node.js to build web apps and APIs.">Express JS</li>
+            <li title="A promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and more.">Sequelize</li>
+            <li title="A widely used, open-source relational database management system.">MySQL</li>
+            <li title="A language that lets you work quickly and integrate systems more effectively.">Python</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATE -->
+    <section id="certificate" class="wrap block block-lg">
+      <div class="cert">
+        <div>
+          <h2 class="display t-title">My certificate</h2>
+          <p class="lead">Proof that I take Python seriously, even between naps. Tap the card to see it full size.</p>
+          <a class="cert-link" href="./assets/images/cert-python.png" target="_blank" rel="noopener">Open original image <svg class="ic"><use href="#i-arrow"/></svg></a>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+        <button class="polaroid" id="certBtn" type="button" aria-label="View certificate full size">
+          <img src="./assets/images/cert-python.png" alt="Python certificate" loading="lazy">
+          <span class="display">Python certificate</span>
         </button>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="wrap block">
+      <div class="section-head">
+        <h2 class="display t-title">Recent projects</h2>
+        <p class="lead">Live sites open in a new tab.</p>
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:dimasptraautmaa@gmail.com" class="contact-link">dimasptraautmaa@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="https://wa.me/+6285813549448" class="contact-link">Tap to chat</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">****** * ****</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-            <address>West Java, Indonesia</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://instagram.com/dimasptrautmaa" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="web design" aria-pressed="false">Web design</button>
+        <button type="button" data-filter="ui/ux" aria-pressed="false">UI/UX</button>
+        <button type="button" data-filter="web development" aria-pressed="false">Web development</button>
       </div>
 
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Project</button>
-          </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Service</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello! I'm Dimas, a Frontend Web Developer. I'm also a Software Engineering student passionate about building web app. I really enjoy programming and sleeping, of course. Lets make a project together.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/sleeping.png
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Sleeping</h4>
-
-                <p class="service-item-text">
-                  I usually sleep three times a day, hehe. 😆
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the intermediate level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/data-modelling.png" alt="camera icon" width="45">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Modeling</h4>
-
-                <p class="service-item-text">
-                  I design clean, efficient data structures and relationships.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">UI/UX Design</h4>
-
-                <p class="service-item-text">
-                  Professional Design of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Dimas Putra</h4>
-
-              <time datetime="2021-06-14">14 June, 2024</time>
-
-              <div data-modal-text>
-                <p>
-                  
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume active" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <!-- <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Frontend Developer</h4>
-
-              <span>Present</span>
-
-              <p class="timeline-text">
-                Become a freelancer and complete many projects from clients with various levels of development difficulty, and always get satisfied results from clients.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Fullstack Developer</h4>
-
-              <span>8 Months</span>
-
-              <p class="timeline-text">
-                Successfully completed the development of a web-based game application and was recognized with an award for demonstrating high-level logical reasoning and implementing excellent features in the program.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Graphic Designer</h4>
-
-              <span>3 Months</span>
-
-              <p class="timeline-text">
-                Completed internship in PT. Satwagia Indonesia for 3 Months and im assigned in Graphic Design.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section> -->
-
-        <section class="projects">
-          <h3 class="h3 skills-title">My certs</h3>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./assets/images/cert-python.png" target="_blank">
-
-                <figure class="project-img">
-                  <img src="./assets/images/cert-python.png" alt="fundo" loading="lazy">
-                </figure>
-
-              </a>
-            </li>
-            
-          </ul>
-        </section>
-
-        <section class="service">
-
-          <h3 class="h3 service-title" style="margin-top: 30px;">My Stack</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/science.png
-                " alt="design icon" width="50">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">React JS</h4>
-
-                <p class="service-item-text">
-                  React is a JavaScript library for building user interfaces, particularly single-page applications where the UI is composed of reusable components.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img style="border-radius: 50%;" src="./assets/images/ex.png
-                " alt="design icon" width="45">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Express JS</h4>
-
-                <p class="service-item-text">
-                  Express.js is a fast, unopinionated, and minimal web framework for Node.js. It's designed to build web applications and APIs efficiently.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/seq.png
-                " alt="design icon" width="45">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Sequelize</h4>
-
-                <p class="service-item-text">
-                  Sequelize is a promise-based Node.js ORM tool for Postgres, MySQL, MariaDB, SQLite, Microsoft SQL Server, Oracle Database, Amazon Redshift and Snowflake’s Data Cloud.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/mysql.svg
-                " alt="design icon" width="65">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">MySQL</h4>
-
-                <p class="service-item-text">
-                  MySQL is a widely used, open-source relational database management system (RDBMS).
-                </p>
-              </div>
-
-            </li>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/python.png
-                " alt="design icon" width="50">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Python</h4>
-
-                <p class="service-item-text">
-                  Python is a programming language that lets you work quickly
-                  and integrate systems more effectively.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Frontend Development</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Backend Development</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="project" data-page="project">
-
-        <header>
-          <h2 class="h2 article-title">Recent project</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>UI/UX</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>UI/UX</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://trekkingsentul44.com">
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/trekking.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Trekking Sentul</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://mehguy.netlify.app">
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/mehguy.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MEH GUY (backup)</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://stressloticket.netlify.app">
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-1.jpg" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Ticketing (backup)</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://arxfurniture.netlify.app">
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/arex.jpg" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Furniture (backup)</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://projectarfurniture.netlify.app">
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/ar.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">AR Furniture (sample)</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ui/ux">
-              <a>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">UI/UX</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="service">
-
-        <header>
-          <h2 style="margin-bottom: 40px;" class="h2 article-title">Services</h2>
-        </header>
-
-        <ul class="service-list">
-
-          <!-- <a href="https://ticket.stresslo.com" class="service-item">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-ticket fa-2xl"></i>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">QR Code Tickets</h4>
-              <p class="service-item-text">
-                QR code tickets are digital tickets using QR codes for quick and secure access to events or locations.
-              </p>
-            </div>
-          </a> -->
-
-          <!-- <li class="service-item">
-            <div class="service-icon-box">
-              <img src="./assets/images/icon-design.svg
-              " alt="design icon" width="40">
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Web design</h4>
-              <p class="service-item-text">
-                The most modern and high-quality design made at a professional level.
-              </p>
-            </div>
-          </li> -->
-
-          <a target="_blank" class="service-item" >
-            <div class="service-icon-box">
-              <i class="fa-solid fa-chart-pie fa-2xl"></i>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title"><span style="color: #FFDB72;">Starter</span>-</h4>
-              <p class="service-item-text">
-                Static responsive website 3–7 pages, company profile display, product display, contact information, basic SEO + Free domain (.com) & hosting setup
-              </p>
-            </div>
-
-          <a target="_blank" class="service-item" >
-            <div class="service-icon-box">
-              <i class="fa-solid fa-building fa-2xl"></i>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title"><span style="color: #FFDB72;">Company</span>-</h4>
-              <p class="service-item-text">
-                All Starter features + admin login, product/service management (add/edit/delete), dynamic content updates, basic SEO + Free domain (.com) & hosting setup
-              </p>
-            </div>
-            
-          <a target="_blank" class="service-item" >
-            <div class="service-icon-box">
-              <i class="fa-solid fa-circle-nodes fa-2xl"></i>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title"><span style="color: #FFDB72;">Advanced</span>-</h4>
-              <p class="service-item-text">
-                All Company features + user roles, performance & security optimization, optional integrations (payment gateway/API), basic SEO + Free domain (.com) & hosting setup
-              </p>
-            </div>
-
+      <ul class="project-grid">
+
+        <li class="project-item wide" data-category="web development" style="--tone:#CFC8FF">
+          <a class="project-card lift" href="https://trekkingsentul44.com" target="_blank" rel="noopener">
+            <div class="project-img"><span class="display">Trekking Sentul</span><img src="./assets/images/trekking.jpg" alt="Trekking Sentul" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Trekking Sentul</h3><p class="muted small">Web development</p></div><svg class="ic ic-blue"><use href="#i-arrow"/></svg></div>
           </a>
-          <a target="_blank" class="service-item" >
-            <div class="service-icon-box">
-              <i class="fa-solid fa-gear fa-2xl"></i>
-            </div>
-            <div class="service-content-box">
-               <h4 class="h4 service-item-title"><span style="color: #FFDB72;">Custom</span>-</h4>
-              <p class="service-item-text">
-                Fully custom website or web app with tailored design, features, admin dashboard, SEO & security. Price based on project scope.
-              </p>
-            </div>
+        </li>
+
+        <li class="project-item" data-category="web development" style="--tone:#BDEBD9">
+          <a class="project-card lift" href="https://mehguy.netlify.app" target="_blank" rel="noopener">
+            <div class="project-img"><span class="display">MEH GUY</span><img src="./assets/images/mehguy.jpg" alt="MEH GUY" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">MEH GUY <em>(backup)</em></h3><p class="muted small">Web development</p></div><svg class="ic ic-blue"><use href="#i-arrow"/></svg></div>
           </a>
+        </li>
 
-        </ul>
+        <li class="project-item" data-category="web development" style="--tone:#FFE9A8">
+          <a class="project-card lift" href="https://stressloticket.netlify.app" target="_blank" rel="noopener">
+            <div class="project-img"><span class="display">Ticketing</span><img src="./assets/images/project-1.jpg" alt="Ticketing" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Ticketing <em>(backup)</em></h3><p class="muted small">Web development</p></div><svg class="ic ic-blue"><use href="#i-arrow"/></svg></div>
+          </a>
+        </li>
 
-      </article>
+        <li class="project-item wide" data-category="web development" style="--tone:#FFD3C2">
+          <a class="project-card lift" href="https://arxfurniture.netlify.app" target="_blank" rel="noopener">
+            <div class="project-img"><span class="display">Furniture</span><img src="./assets/images/arex.jpg" alt="Furniture" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Furniture <em>(backup)</em></h3><p class="muted small">Web development</p></div><svg class="ic ic-blue"><use href="#i-arrow"/></svg></div>
+          </a>
+        </li>
 
-    </div>
+        <li class="project-item" data-category="web development" style="--tone:#CFC8FF">
+          <a class="project-card lift" href="https://projectarfurniture.netlify.app" target="_blank" rel="noopener">
+            <div class="project-img"><span class="display">AR Furniture</span><img src="./assets/images/ar.jpg" alt="AR Furniture" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">AR Furniture <em>(sample)</em></h3><p class="muted small">Web development</p></div><svg class="ic ic-blue"><use href="#i-arrow"/></svg></div>
+          </a>
+        </li>
+
+        <li class="project-item wide" data-category="web design" style="--tone:#BDEBD9">
+          <div class="project-card">
+            <div class="project-img"><span class="display">DSM.</span><img src="./assets/images/project-5.png" alt="DSM." loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">DSM.</h3><p class="muted small">Web design</p></div></div>
+          </div>
+        </li>
+
+        <li class="project-item" data-category="web design" style="--tone:#FFE9A8">
+          <div class="project-card">
+            <div class="project-img"><span class="display">MetaSpark</span><img src="./assets/images/project-6.png" alt="MetaSpark" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">MetaSpark</h3><p class="muted small">Web design</p></div></div>
+          </div>
+        </li>
+
+        <li class="project-item" data-category="web development" style="--tone:#FFD3C2">
+          <div class="project-card">
+            <div class="project-img"><span class="display">Summary</span><img src="./assets/images/project-7.png" alt="Summary" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Summary</h3><p class="muted small">Web development</p></div></div>
+          </div>
+        </li>
+
+        <li class="project-item wide" data-category="ui/ux" style="--tone:#CFC8FF">
+          <div class="project-card">
+            <div class="project-img"><span class="display">Task Manager</span><img src="./assets/images/project-8.jpg" alt="Task Manager" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Task Manager</h3><p class="muted small">UI/UX</p></div></div>
+          </div>
+        </li>
+
+        <li class="project-item" data-category="web development" style="--tone:#BDEBD9">
+          <div class="project-card">
+            <div class="project-img"><span class="display">Arrival</span><img src="./assets/images/project-9.png" alt="Arrival" loading="lazy" onerror="this.remove()"></div>
+            <div class="project-meta"><div><h3 class="display">Arrival</h3><p class="muted small">Web development</p></div></div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="wrap block block-lg">
+      <div class="section-head">
+        <h2 class="display t-title">Services</h2>
+        <p class="lead">Each plan includes basic SEO, a free .com domain and hosting setup.</p>
+      </div>
+      <ul class="plans">
+        <li class="plan step-0 lift" style="--bg:#CFC8FF"><h3 class="display">Starter</h3><p>Static responsive website, 3–7 pages: company profile, product display, contact info, basic SEO, free .com domain and hosting setup.</p></li>
+        <li class="plan step-1 lift" style="--bg:#BDEBD9"><h3 class="display">Company</h3><p>All Starter features + admin login, product/service management (add, edit, delete) and dynamic content updates.</p></li>
+        <li class="plan step-2 lift" style="--bg:#FFE9A8"><h3 class="display">Advanced</h3><p>All Company features + user roles, performance and security optimization, and optional integrations (payment gateway/API).</p></li>
+        <li class="plan step-3 plan-dark lift"><h3 class="display">Custom</h3><p>A fully custom website or web app with tailored design, features, admin dashboard, SEO and security. Price based on project scope.</p></li>
+      </ul>
+    </section>
 
   </main>
 
+  <!-- CONTACT -->
+  <footer id="contact" class="contact">
+    <div class="contact-inner">
+      <h2 class="display t-cta">Let's make a project together.</h2>
+      <div class="contact-actions">
+        <a class="btn btn-white" href="mailto:dimasptraautmaa@gmail.com"><svg class="ic"><use href="#i-mail"/></svg> dimasptraautmaa@gmail.com</a>
+        <a class="btn btn-ghost" href="https://wa.me/+6285813549448" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> WhatsApp</a>
+        <a class="btn btn-ghost" href="https://instagram.com/dimasptrautmaa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg> Instagram</a>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> Dimas Putra. Made in West Java, Indonesia.</p>
+    </div>
+  </footer>
 
+  <!-- Certificate lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+    <img src="./assets/images/cert-python.png" alt="Python certificate">
+  </div>
 
-
-
-
-  <!--
-    - custom js link
-  -->
+  <!-- custom js -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
