@@ -163,25 +163,43 @@ section[id], footer[id] { scroll-margin-top: 5rem; }
 /*-----------------------------------*\
   #CERTIFICATE
 \*-----------------------------------*/
-.cert {
-  display: grid; gap: 2.5rem; align-items: center; padding: 1.5rem;
-  background: var(--ink); color: #fff; border-radius: 2rem;
+.cert { padding: 1.5rem; background: var(--ink); color: #fff; border-radius: 2rem; }
+.cert-head { max-width: 36rem; }
+.cert-head .lead { color: #C9C5F0; margin-top: 1rem; }
+
+/* phones: swipeable row · ≥640px: centered wrapping grid */
+.cert-list {
+  display: flex; justify-content: safe center; gap: 1.25rem;
+  margin: 1.5rem -1.5rem 0; padding: 1.25rem 1.5rem 1rem;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
 }
-.cert .lead { color: #C9C5F0; margin-top: 1rem; }
-.cert-link { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; margin-top: 1.5rem; font-weight: 500; color: var(--butter); text-decoration: underline; text-underline-offset: 4px; }
+.cert-list::-webkit-scrollbar { display: none; }
+.cert-list li { flex: 0 0 78%; max-width: 20rem; scroll-snap-align: center; }
+.cert-list li:nth-child(3n+1) .polaroid { --tilt: -2deg; }
+.cert-list li:nth-child(3n+2) .polaroid { --tilt: 1.5deg; }
+.cert-list li:nth-child(3n)   .polaroid { --tilt: -1deg; }
 
 .polaroid {
-  width: 100%; max-width: 28rem; margin-inline: auto; padding: .75rem .75rem 2rem;
+  display: block; width: 100%; padding: .75rem .75rem 1.75rem;
   background: #fff; color: var(--ink); border-radius: 6px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .5);
-  transform: rotate(-2deg); transition: transform .5s var(--ease-pop);
+  transform: rotate(var(--tilt, -2deg)); transition: transform .5s var(--ease-pop);
 }
-.polaroid img { width: 100%; height: auto; min-height: 8rem; background: var(--soft); border-radius: 2px; }
-.polaroid span { display: block; text-align: center; font-style: italic; font-size: 1.125rem; margin-top: .75rem; }
-@media (hover: hover) { .polaroid:hover { transform: rotate(0) scale(1.03); } }
+.polaroid img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--soft); border-radius: 2px; }
+.polaroid span { display: block; text-align: center; font-style: italic; font-size: 1.05rem; line-height: 1.25; margin-top: .75rem; }
+@media (hover: hover) { .polaroid:hover { transform: rotate(0) scale(1.04); } }
 
-.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 1rem; background: rgba(21, 19, 58, .88); }
-.lightbox img { max-width: 100%; max-height: 80vh; object-fit: contain; background: #fff; border-radius: 8px; }
-.lightbox-close { position: absolute; top: 1rem; right: 1rem; width: 44px; height: 44px; display: grid; place-items: center; background: #fff; border-radius: 50%; }
+/* viewer */
+.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 3.5rem 1rem 1rem; background: rgba(21, 19, 58, .9); }
+.lightbox-fig { display: grid; justify-items: center; gap: 1rem; width: 100%; max-width: 64rem; }
+.lightbox-fig img { max-width: 100%; max-height: 68vh; object-fit: contain; background: #fff; border-radius: 8px; }
+.lightbox-bar { display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; color: #fff; }
+.lightbox-cap { display: flex; flex-direction: column; align-items: center; gap: .1rem; text-align: center; min-width: 0; }
+.lightbox-cap .display { font-size: 1.25rem; }
+.lightbox-cap .small { opacity: .75; }
+.lightbox-cap a { display: inline-flex; align-items: center; gap: .35rem; min-height: 40px; color: var(--butter); text-decoration: underline; text-underline-offset: 4px; font-size: .9rem; }
+.lightbox-nav, .lightbox-close { width: 44px; height: 44px; flex-shrink: 0; display: grid; place-items: center; background: #fff; color: var(--ink); border-radius: 50%; transition: transform .25s; }
+.lightbox-nav:hover { transform: scale(1.08); }
+.lightbox-close { position: absolute; top: 1rem; right: 1rem; }
 
 /*-----------------------------------*\
   #PROJECTS
@@ -269,9 +287,14 @@ section[id], footer[id] { scroll-margin-top: 5rem; }
   .pct { font-size: 1.5rem; }
   .stack li { padding: .375rem 1rem; }
 
-  .cert { padding: 3rem; border-radius: 3rem; gap: 3.5rem; }
-  .polaroid { padding: 1rem 1rem 2.5rem; }
-  .polaroid span { font-size: 1.25rem; margin-top: 1rem; }
+  .cert { padding: 3rem; border-radius: 3rem; }
+  .cert-list {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 17rem)); justify-content: center;
+    gap: 2rem 1.75rem; margin: 2.5rem 0 0; padding: 0; overflow: visible;
+  }
+  .cert-list li { max-width: none; }
+  .polaroid { padding: 1rem 1rem 2rem; }
+  .polaroid span { font-size: 1.15rem; }
 
   .filters { flex-wrap: wrap; margin: 0 0 2.5rem; padding: 0; overflow: visible; }
   .project-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -295,7 +318,6 @@ section[id], footer[id] { scroll-margin-top: 5rem; }
   .hero { grid-template-columns: 7fr 5fr; gap: 2.5rem; }
   .hero-art { max-width: none; }
   .rings { grid-template-columns: repeat(4, 1fr); }
-  .cert { grid-template-columns: 1fr 1fr; padding: 3rem; }
 }
 
 /* ≥ 1024px */
